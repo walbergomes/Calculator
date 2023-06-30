@@ -1,0 +1,96 @@
+:root {
+  --salmon: #F38064;
+  --number: #3B3B3B;
+  --operation: #323232;
+  --card: #202020;
+  --background: #0E0E0E;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+}
+
+.card {
+  background: var(--card);
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.card h1{
+  color: #fff;
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+.display {
+  text-align: right;
+}
+
+.previus,
+.current {
+  min-height: 1.6em;
+  padding-bottom: .2rem;
+  overflow-wrap: break-word;
+
+}
+
+.previus {
+  color: #808080;
+  font-size: 1rem;
+}
+
+.current {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: .19rem;
+}
+
+.buttons button {
+  padding: 1rem;
+  height: 4em;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: var(--number);
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: #555353;
+  border-color: #fff;
+}
+
+.buttons .operat {
+  background: var(--operation);
+}
+
+.buttons #btn-equal {
+  grid-column: 3/5;
+  background: var(--salmon);
+  color: #000;
+}
