@@ -18,7 +18,6 @@ class Calculadora {
   }
 
   //OPERATIONS
-
   operations(operation) {
 
     let previus
@@ -80,7 +79,7 @@ class Calculadora {
         }
 
         displayCurrent.innerText = result.toString()
-        displayPrevius.innerText = ''
+        displayPrevius.innerText = `${previus} ${operator} ${current} =`
         this.current = result.toString()
         break;
       default:
@@ -104,11 +103,7 @@ class Calculadora {
     this.current = this.current.slice(0, -1);
     displayCurrent.innerText = this.current;
   }
-
-
-
 }
-
 
 const calc = new Calculadora(displayCurrent, displayPrevius)
 
